@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Website Layout 1</title>
+        <style>
+        * {
+            box-sizing: border-box; 
+            }
+        body {
+            display: flex;
+            min-height: 100vh;
+            flex-direction: column;
+            margin: 0;
+        }
+                
+        .headerContainer {
+            background: tomato;
+            height: 20vh;
+        }
+        
+        .mainContainer {
+            display: flex;
+            flex: 1;
+        }
+
+        .mainContentItem {
+            text-align: left;
+            background: deepskyblue;
+        }
+        
+        article {
+            flex: 1;
+            order: 1;
+            padding: 10px;
+            margin: 10px;
+            background: aqua;
+        }
+        
+        .sideBarLeftItem, .sideBarRightItem {
+            flex: 0 0 20vw;
+        
+        }
+        
+        .sideBarLeftItem {
+            background: gold;
+            order: 2;
+        }
+        
+        .sideBarRightItem {
+            background: hotpink;
+            order: 3;
+        }
+        
+        .footerContainer {
+            background: lightgreen;
+            height: 20vh;
+        }
+        
+        .headerContainer, .footerContainer, article, .sideBarLeftItem,  .sideBarRightItem {
+            padding: 1em;
+        }
+ 
+</style>
+<body>
+  <header class='headerContainer'><h1>HEADER - Website Layout 1</h1></header>
+  <div class="mainContainer">
+    <section class="mainContentItem">
+    <article>
+        <h2>First article</h2>
+
+        <p>Tacos Are Really, Really Old The first recorded reference to the word taco, then it was tacos mineros, came about in the 19th century. </p>
+    </article>
+    <article>
+        <h2>Second article</h2>
+
+        <p>Tacos Are Really, Really Old The first recorded reference to the word taco, then it was tacos mineros, came about in the 19th century.</p>
+    </article>
+    <article>
+        <h2>Thrid article</h2>
+
+        <p>Tacos Are Really, Really Old The first recorded reference to the word taco, then it was tacos mineros, came about in the 19th century.</p>
+
+        <p>The first mention of the word taco in the United States didn't come around until 1905. When they first became popular in Mexico, they were served in the silver mines.</p>
+    </article>
+    </section>
+        <sideBar class="sideBarItem sideBarLeftItem"><div class="center"><p>Left Side Bar</p></div></sideBar>
+        <sideBar class="sideBarItem sideBarRightItem"><div class="center"><p>Right Side Bar</p></div></sideBar>
+    </div>
+  <footer class="footerContainer">Footer</footer>
+</body>
